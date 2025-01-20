@@ -78,7 +78,10 @@ function App() {
   return (
     <div>
       <Header />
-      <h1>Hello world!!!</h1>
+      <div className="searcInput">
+        <h3>Поиск</h3>
+        <Input value={valueSearch} onChange={(e) => handleSearchTodo(e.target.value)} />
+      </div>
       <div className="main">
         <Input value={value} onChange={(e) => handleChange(e.target.value)} />
         <div className="main-btn">
@@ -114,11 +117,6 @@ function App() {
             <p className="ampty-string">Здесь пока ни чего нЭЭЭЭЭЭту!!!</p>
           )}
         </ul>
-
-        <div className="searcInput">
-          <h3>Поиск</h3>
-          <Input value={valueSearch} onChange={(e) => handleSearchTodo(e.target.value)} />
-        </div>
       </main>
     </div>
   );
